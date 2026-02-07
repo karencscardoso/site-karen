@@ -1,0 +1,18 @@
+<main>
+    <h1>Filmografia</h1>
+    @for(item of types; track item.type) {
+        <app-button-generic [label]="item.type"></app-button-generic>
+    }
+    <app-button-generic></app-button-generic>
+    <mat-grid-list cols="3" rowHeight="480px" gutterSize="20px">
+        @for(film of films; track film.name) {
+            <mat-grid-tile>
+                <app-card-film [filmData]="film"></app-card-film>
+            </mat-grid-tile>
+        } @empty {
+            <mat-grid-tile>
+                <p>Nenhum filme encontrado.</p>
+            </mat-grid-tile>
+        }
+    </mat-grid-list>
+</main>
