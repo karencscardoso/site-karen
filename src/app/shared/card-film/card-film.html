@@ -1,20 +1,20 @@
 <article class="card-container">
     <header class="card-container__header">
-        <img src="SHD_0119.jpg" alt="Karen Cardoso">
+        <img [src]="filmData.img" alt="Karen Cardoso">
         <time datetime="2025">{{ filmData.year }}</time>
     </header>
     <section class="card-container__content">
-        <span>
-            {{ filmData.type }}
-        </span>
-        <h2>{{ filmData.name }}</h2>
-        <p>Vídeo Assist</p>
+        <div>
+            <h2>{{ filmData.name }}</h2>
+            <p>{{ filmData.function }}</p>
+        </div>
+
         <dl class="card-container__content-description">
             <div class="card-container__content-description--info">
-                <mat-icon>person</mat-icon>
+                <mat-icon>movie</mat-icon>
                 <div>
                     <dt>DIR. FOTOGRAFIA</dt>
-                    <dd>{{ filmData.directorFotografy }}</dd>
+                    <dd [title]="filmData.directorFotografy">{{ filmData.directorFotografy }}</dd>
                 </div>
 
             </div>
@@ -22,18 +22,13 @@
                 <mat-icon>person</mat-icon>
                 <div>
                     <dt>DIREÇÃO</dt>
-                    <dd>{{ filmData.director }}</dd>
+                    <dd [title]="filmData.director">{{ filmData.director }}</dd>
                 </div>
 
             </div>
-            <!-- <div class="card-container__content-description--info">
-                <mat-icon>theaters</mat-icon>
-                <div>
-                    <dt>PRODUTORA</dt>
-                    <dd>{{ filmData.productor }}</dd>
-                </div>
-
-            </div> -->
         </dl>
+        <span>
+            {{ filmData.type }}
+        </span>
     </section>
 </article>

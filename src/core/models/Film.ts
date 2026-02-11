@@ -1,4 +1,5 @@
 export interface Film { 
+    img: string;
     name: string;
     year: number;
     type: string;
