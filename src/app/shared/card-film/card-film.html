@@ -1,6 +1,12 @@
 <article class="card-container">
     <header class="card-container__header">
-        <img [src]="filmData.img" alt="Karen Cardoso">
+        @if(filmData.img) {
+            <img [src]="filmData.img" alt="Karen Cardoso">
+        } @else {
+            <div class="card-container__header--icon">
+                <mat-icon>movie</mat-icon>
+            </div>
+        }
         <time datetime="2025">{{ filmData.year }}</time>
     </header>
     <section class="card-container__content">

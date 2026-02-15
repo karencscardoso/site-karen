@@ -1,10 +1,11 @@
-<main>
+<main class="c-container">
     <h1>Filmografia</h1>
-    @for(item of types; track item.type) {
-        <app-button-generic [label]="item.type"></app-button-generic>
-    }
-    <app-button-generic></app-button-generic>
-    <mat-grid-list cols="3" rowHeight="480px" gutterSize="20px">
+    <nav class="c-container__header">
+        @for(item of types; track item.type) {
+            <app-button-generic [label]="item.type"></app-button-generic>
+        }
+    </nav>
+    <mat-grid-list cols="3" rowHeight="300px" gutterSize="20px">
         @for(film of films; track film.name) {
             <mat-grid-tile>
                 <app-card-film [filmData]="film"></app-card-film>

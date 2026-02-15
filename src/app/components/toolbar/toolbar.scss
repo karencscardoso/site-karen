@@ -1,3 +1,5 @@
+@import '../../../core/styles/variables';
+
 .toolbar {
     display: flex;
     justify-content: flex-end;
@@ -15,7 +17,7 @@
             letter-spacing: 0.1em;
             transition: color 0.3s ease;
             &:hover {
-                color: #bf0d98;
+                color: $text-secondary;
             }
     }
 }}

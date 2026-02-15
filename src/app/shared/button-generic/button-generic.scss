@@ -1,6 +1,12 @@
-button {
-    background-color: var(--primary-color);
-}
+@import '../../../core/styles/variables';
 
-::ng-deep mat-mdc-button {
+.custom-button {
+    border: 1px solid $white !important;
+    color: $white !important;
+
+    &:hover {
+        border: 1px solid $text-secondary !important;
+        background-color: $text-secondary !important;
+        color: $white !important;
+    }
 }

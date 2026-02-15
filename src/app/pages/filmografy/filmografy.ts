@@ -26,7 +26,7 @@ export class Filmografy {
 
   films: Film[] = [
     {
-      img: '/Rauls.webp',
+      img: '',
       name: 'Rauls',
       year: 2026,
       type: 'Série',
@@ -35,7 +35,7 @@ export class Filmografy {
       function: '2ª Assistente de Câmera'
     },
     {
-      img: '/vespera.webp',
+      img: '',
       name: 'Vespera',
       year: 2025,
       type: 'Série',
@@ -81,7 +81,7 @@ export class Filmografy {
     },
     {
       img: '/a-super-fantastica-historia-do-balao.jpg',
-      name: 'A Superfantástica História do Balão',
+      name: 'Superfantástica História do Balão',
       year: 2023,
       type: 'Documentário',
       directorFotografy: 'Edmur Epifanio e Fabio Porcelli',
@@ -107,7 +107,7 @@ export class Filmografy {
       function: '2ª Assistente de Câmera'
     },
     {
-      img: '/as-vitrines.jpg',
+      img: '',
       name: 'As Vitrines',
       year: 2025,
       type: 'Longa-metragem',
@@ -143,7 +143,7 @@ export class Filmografy {
       function: '2ª Assistente de Câmera'
     },
     {
-      img: '/aurora.jpg',
+      img: '',
       name: 'Aurora',
       year: 2025,
       type: 'Curta-metragem',
