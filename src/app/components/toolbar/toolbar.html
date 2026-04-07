@@ -1,13 +1,14 @@
 <mat-toolbar class="toolbar" color="primary">
     <ul class="toolbar__link">
         <li>
-            <a routerLink="/">Home</a>
+            <a routerLink="/home" routerLinkActive="active">Home</a>
         </li>
         <!-- <li>
             <a routerLink="/about">Sobre</a>
         </li> -->
         <li>
-            <a routerLink="/filmografy">Filmografia</a>
+            <a [routerLink]="'/' + currentPath()" routerLinkActive="active">{{ title() }}</a>
         </li>
+       
     </ul>
 </mat-toolbar>

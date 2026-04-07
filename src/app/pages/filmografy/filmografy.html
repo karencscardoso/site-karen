@@ -1,12 +1,16 @@
+<app-toolbar></app-toolbar>
 <main class="c-container">
-    <h1>Filmografia</h1>
+    <h1>Filmografy</h1>
     <nav class="c-container__header">
         @for(item of types; track item.type) {
-            <app-button-generic [label]="item.type"></app-button-generic>
+            <app-button-generic
+                [label]="item.type"
+                (click)="filterByType(item.type)">
+            </app-button-generic>
         }
     </nav>
     <mat-grid-list cols="3" rowHeight="300px" gutterSize="20px">
-        @for(film of films; track film.name) {
+        @for(film of filteredFilms; track film.name) {
             <mat-grid-tile>
                 <app-card-film [filmData]="film"></app-card-film>
             </mat-grid-tile>

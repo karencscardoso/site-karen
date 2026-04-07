@@ -1,12 +1,17 @@
 @import '../../../core/styles/variables';
 
 .custom-button {
-    border: 1px solid $white !important;
-    color: $white !important;
+    border: none !important;
+    background-color: transparent !important;
+    color: $secondary !important;
+    transition: background-color 0.6s ease, color 0.6s ease;
+
+  ::ng-deep .mat-mdc-button-persistent-ripple::before {
+        display: none !important;
+    }
 
     &:hover {
-        border: 1px solid $text-secondary !important;
-        background-color: $text-secondary !important;
+        background-color: $secondary !important;
         color: $white !important;
     }
 }

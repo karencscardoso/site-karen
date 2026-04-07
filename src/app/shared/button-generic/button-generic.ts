@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 
 @Component({
@@ -11,4 +11,9 @@ import { MatButtonModule } from '@angular/material/button';
 })
 export class ButtonGeneric {
   @Input() label: string = '';
+  @Output() btnClick = new EventEmitter<void>();
+
+  onClick() {
+    this.btnClick.emit();
+  }
 }

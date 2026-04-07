@@ -1,6 +1,6 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { Toolbar } from './components/toolbar/toolbar';
+// import { Toolbar } from './components/toolbar/toolbar';
 // import { Footer } from './components/footer/footer';
 
 
@@ -9,7 +9,7 @@ import { Toolbar } from './components/toolbar/toolbar';
   selector: 'app-root',
   imports: [
     RouterOutlet,
-    Toolbar,
+    // Toolbar,
     // Footer,
   ],
   templateUrl: './app.html',

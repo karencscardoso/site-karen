@@ -1,5 +1,7 @@
+@import '../../../core/styles/variables';
+
 p {
-    color: #fff;
+    color: $white;
     text-align: center;
 }
 * {
