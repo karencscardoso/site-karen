@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Film, TypeFilm } from '../../../core/models/Film';
 import { CardFilm } from '../../shared/card-film/card-film';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { ButtonGeneric } from '../../shared/button-generic/button-generic';
 import { Toolbar } from '../../components/toolbar/toolbar';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 
 @Component({
   selector: 'app-filmografy',
@@ -17,7 +18,28 @@ import { Toolbar } from '../../components/toolbar/toolbar';
   templateUrl: './filmografy.html',
   styleUrl: './filmografy.scss',
 })
-export class Filmografy {
+export class Filmografy implements OnInit {
+  cols = 3;
+
+  constructor(private breakpointObserver: BreakpointObserver) { }
+
+ngOnInit(): void {
+  this.breakpointObserver.observe([
+    '(max-width: 800px)', // Abrange tablets e celulares de forma garantida
+    '(max-width: 480px)'  // Celulares pequenos
+  ]).subscribe(result => {
+    const width = window.innerWidth;
+
+    if (width <= 480) {
+      this.cols = 1;
+    } else if (width <= 800) {
+      this.cols = 2;
+    } else {
+      this.cols = 3;
+    }
+  });
+  }
+
   types: TypeFilm[] = [
     { type: 'All' },
     { type: 'Documentary' },

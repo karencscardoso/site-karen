@@ -9,7 +9,7 @@
             </app-button-generic>
         }
     </nav>
-    <mat-grid-list cols="3" rowHeight="300px" gutterSize="20px">
+    <mat-grid-list [cols]="cols" rowHeight="350px" gutterSize="20px">
         @for(film of filteredFilms; track film.name) {
             <mat-grid-tile>
                 <app-card-film [filmData]="film"></app-card-film>
