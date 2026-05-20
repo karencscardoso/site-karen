@@ -6,7 +6,7 @@ import { Ti } from './pages/ti/ti';
 
 export const routes: Routes = [
     
-    { path: '', component: Home },
+    { path: '', component: Filmografy },
     { path: 'home', component: Home },
     { path: 'filmografy',component: Filmografy, data: { toolbarTitle: 'Filmografy' } },
     { path: 'projects', component: Ti, data: { toolbarTitle: 'Projects' } },
