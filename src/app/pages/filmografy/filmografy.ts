@@ -62,7 +62,7 @@ ngOnInit(): void {
       type: 'Series',
       directorFotografy: 'Kaue Zilli',
       director: '---',
-      function: 'Vídeo Assist Extra'
+      function: 'Extra Vídeo Assist'
     },
     {
       img: '/rota66.webp',
@@ -71,7 +71,7 @@ ngOnInit(): void {
       type: 'Series',
       directorFotografy: 'Eduardo Piagge e Pedro Mafei',
       director: '---',
-      function: 'Vídeo Assist Extra'
+      function: 'Extra Vídeo Assist'
     },
     {
       img: '',
@@ -80,7 +80,7 @@ ngOnInit(): void {
       type: 'Short Film',
       directorFotografy: 'Giovanna Pezzo',
       director: '---',
-      function: '2ª Assistente de Câmera'
+      function: '2nd Assistant Camera'
     },
     {
       img: '',
@@ -89,7 +89,7 @@ ngOnInit(): void {
       type: 'Series',
       directorFotografy: 'Glauco Firpo',
       director: 'Kaike Alves',
-      function: '2ª Assistente de Câmera'
+      function: '2nd Assistant Camera'
     },
     {
       img: '',
@@ -98,7 +98,7 @@ ngOnInit(): void {
       type: 'Series',
       directorFotografy: 'Glauco Firpo',
       director: 'Joana Jabace e Talita',
-      function: '2ª Assistente de Câmera'
+      function: '2nd Assistant Camera'
     },
     {
       img: '/o-caseiro.webp',
@@ -134,7 +134,7 @@ ngOnInit(): void {
       type: 'Feature Film',
       directorFotografy: 'Kaue Zilli',
       director: 'Diego Freitas',
-      function: 'Vídeo Assist Extra'
+      function: 'Extra Vídeo Assist'
     },
     {
       img: '/a-super-fantastica-historia-do-balao.jpg',
@@ -143,7 +143,7 @@ ngOnInit(): void {
       type: 'Documentary',
       directorFotografy: 'Edmur Epifanio e Fabio Porcelli',
       director: 'Tatiana Issa',
-      function: '2ª Assistente de Câmera'
+      function: '2nd Assistant Camera'
     },
     {
       img: '/dona-elza.webp',
@@ -152,7 +152,7 @@ ngOnInit(): void {
       type: 'Telenovela',
       directorFotografy: 'Giovanna Pezzo',
       director: 'Diego da Costa e Hiro Ishikawa',
-      function: '2ª Assistente de Câmera'
+      function: '2nd Assistant Camera'
     },
     {
       img: '/cyclone.webp',
@@ -161,7 +161,7 @@ ngOnInit(): void {
       type: 'Feature Film',
       directorFotografy: 'Heloísa Passos',
       director: 'Flávia Castro',
-      function: '2ª Assistente de Câmera'
+      function: '2nd Assistant Camera'
     },
     {
       img: '',
@@ -170,7 +170,7 @@ ngOnInit(): void {
       type: 'Feature Film',
       directorFotografy: 'Heloísa Passos',
       director: 'Flávia Castro',
-      function: '2ª Assistente de Câmera'
+      function: '2nd Assistant Camera'
     },
     {
       img: '/apanhador-de-almas.webp',
@@ -179,7 +179,7 @@ ngOnInit(): void {
       type: 'Feature Film',
       directorFotografy: 'Giovanna Pezzo',
       director: 'Fernando Alonso e Nelson Botter Jr.',
-      function: '2ª Assistente de Câmera'
+      function: '2nd Assistant Camera'
     },
     {
       img: '/sutura.webp',
@@ -188,7 +188,7 @@ ngOnInit(): void {
       type: 'Series',
       directorFotografy: 'Eduardo Piagge e Júlia Éqüi',
       director: 'Diego Martins e Jéssica Queiroz',
-      function: '2ª Assistente de Câmera'
+      function: '2nd Assistant Camera'
     },
     {
       img: '/olhar-indiscreto.webp',
@@ -206,7 +206,7 @@ ngOnInit(): void {
       type: 'Short Film',
       directorFotografy: 'Otávio Puppo',
       director: '---',
-      function: '2ª Assistente de Câmera'
+      function: '2nd Assistant Camera'
     },
     {
       img: '/copa-do-caos.webp',
@@ -215,7 +215,7 @@ ngOnInit(): void {
       type: 'Short Film',
       directorFotografy: 'Lico Queiroz',
       director: '---',
-      function: 'Estagiária Câmera'
+      function: 'Camera Intern'
     },
     {
       img: '',
@@ -224,7 +224,7 @@ ngOnInit(): void {
       type: 'Series',
       directorFotografy: '---',
       director: 'Fabrizia Pinto',
-      function: 'Estagiária Câmera'
+      function: 'Camera Intern'
     },
     {
       img: '/amor-em-sampa.webp',
@@ -233,7 +233,7 @@ ngOnInit(): void {
       type: 'Feature Film',
       directorFotografy: 'Marcelo Trotta',
       director: 'Carlos Alberto Riccelli e Kim Riccelli',
-      function: 'Assistente de Edição'
+      function: 'Editing Assistant'
     },
     {
       img: '/pedro-e-bianca.webp',
@@ -242,7 +242,7 @@ ngOnInit(): void {
       type: 'Series',
       directorFotografy: 'Pedro Eliezer, Sérgio Isidoro',
       director: 'Fábio Mendonça',
-      function: 'Assistente de Edição'
+      function: 'Editing Assistant'
     }
 
   ].sort((a, b) => b.year - a.year);
