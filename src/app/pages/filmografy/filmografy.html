@@ -6,21 +6,50 @@
     <h1>Filmography</h1>
     <nav class="c-container__header">
         @for(item of types; track item.type) {
-            <app-button-generic
-                [label]="item.type"
-                (click)="filterByType(item.type)">
-            </app-button-generic>
+        <app-button-generic [label]="item.type" (click)="filterByType(item.type)">
+        </app-button-generic>
         }
     </nav>
-    <mat-grid-list [cols]="cols" rowHeight="350px" gutterSize="20px">
+    <mat-grid-list [cols]="cols" rowHeight="300px" gutterSize="20px">
         @for(film of filteredFilms; track film.name) {
-            <mat-grid-tile>
-                <app-card-film [filmData]="film"></app-card-film>
-            </mat-grid-tile>
+        <mat-grid-tile>
+            <article class="c-container__grid-container">
+                <header class="c-container__grid-container-header">
+                    @if(film.img) {
+                    <img [src]="film.img" alt="{{ film.name }}">
+                    } @else {
+                    <div class="c-container__grid-container-header--icon">
+                        <mat-icon>movie</mat-icon>
+                    </div>
+                    }
+                </header>
+                <section class="c-container__grid-container-content">
+                    <dl class="c-container__grid-container-content--description">
+                        <div>
+                            <h2>{{ film.name }}</h2>
+                            <p>{{ film.function }}</p>
+                        </div>
+                        <div>
+                            <div>
+                                <dt>CINEMATOGRAPHER</dt>
+                                <dd [title]="film.directorFotografy">{{ film.directorFotografy }}</dd>
+                            </div>
+                            <div>
+                                <dt>DIRECTOR</dt>
+                                <dd [title]="film.director">{{ film.director }}</dd>
+                            </div>
+                        </div>
+                    </dl>
+                    <span>
+                        {{ film.type }}
+                    </span>
+                </section>
+            </article>
+        </mat-grid-tile>
         } @empty {
-            <mat-grid-tile>
-                <p>Nenhum filme encontrado.</p>
-            </mat-grid-tile>
+        <mat-grid-tile>
+            <p>Nenhum filme encontrado.</p>
+        </mat-grid-tile>
         }
     </mat-grid-list>
 </main>

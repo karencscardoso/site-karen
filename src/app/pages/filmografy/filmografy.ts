@@ -1,18 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Film, TypeFilm } from '../../../core/models/Film';
-import { CardFilm } from '../../shared/card-film/card-film';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { MatIconModule } from '@angular/material/icon';
 import { ButtonGeneric } from '../../shared/button-generic/button-generic';
-import { Toolbar } from '../../components/toolbar/toolbar';
-import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+import { BreakpointObserver } from '@angular/cdk/layout';
 
 @Component({
   selector: 'app-filmografy',
   standalone: true,
   imports: [
-    Toolbar,
-    CardFilm,
     MatGridListModule,
+    MatIconModule,
     ButtonGeneric,
   ],
   templateUrl: './filmografy.html',
@@ -20,6 +18,8 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 })
 export class Filmografy implements OnInit {
   cols = 3;
+  @Input() filmData!: Film;
+
 
   constructor(private breakpointObserver: BreakpointObserver) { }
 
@@ -32,7 +32,7 @@ ngOnInit(): void {
 
     if (width <= 480) {
       this.cols = 1;
-    } else if (width <= 800) {
+    } else if (width <= 1240) {
       this.cols = 2;
     } else {
       this.cols = 3;
@@ -55,6 +55,15 @@ ngOnInit(): void {
   });
 
   films: Film[] = [
+   {
+      img: '',
+      name: 'Cine Holliúdy',
+      year: 2017,
+      type: 'Series',
+      directorFotografy: 'Carina Sanginitto',
+      director: 'Halder Gomes',
+      function: 'Vídeo Assist'
+    },
    {
       img: '/irmandade.webp',
       name: 'Irmandade 2ª Temporada',
@@ -79,7 +88,7 @@ ngOnInit(): void {
       year: 2024,
       type: 'Short Film',
       directorFotografy: 'Giovanna Pezzo',
-      director: '---',
+      director: 'Camila Tarifa',
       function: '2nd Assistant Camera'
     },
     {
@@ -138,7 +147,7 @@ ngOnInit(): void {
     },
     {
       img: '/a-super-fantastica-historia-do-balao.jpg',
-      name: 'Superfantástica História do Balão',
+      name: 'História do Balão',
       year: 2022,//2023
       type: 'Documentary',
       directorFotografy: 'Edmur Epifanio e Fabio Porcelli',

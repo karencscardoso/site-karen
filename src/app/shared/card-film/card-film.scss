@@ -1,16 +1,13 @@
 @import '../../../core/styles/variables';
 
-
-
 .card-container {
     display: flex;
     justify-content: space-between;
-    width: 420px;
-    height: 300px;
+    width: 100%;
+    height: 280px;
     background-color: $bg-card;
     color: #a7a7a7;
-    border-radius: 20px;
-    overflow: hidden;
+    border-radius: 0 10px 10px 0px;
 
     &__header {
         display: flex;
@@ -18,12 +15,13 @@
         position: relative;
         width: 50%;
         height: 100%;
+        flex: 1;
 
         img {
             height: 100%;
             width: 100%;
             display: block;
-            object-fit: cover;
+            // object-fit: cover;
         }
 
         &--icon {
@@ -56,14 +54,11 @@
     }
 
     &__content {
+        width: 50%;
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
-        gap: 10px;
-        width: 50%;
-        height: 100%;
-        // margin: 5px 0;
-        padding: 15px 15px;
+        justify-content: space-evenly;
+        padding: 10px 10px;
 
         h2 {
             font-size: 1.5rem;
@@ -102,7 +97,7 @@
                 align-items: center;
                 gap: 10px;
                 flex: 1 1 40%;
-                margin-top: 20px;
+                // margin-top: 20px;
 
                 div {
                     min-width: 0;
@@ -116,15 +111,17 @@
                     text-overflow: ellipsis;
                     width: 100%;
                     color: $default;
+                    text-align: center;
                 }
 
                 dd {
                     font-weight: 600;
-                    white-space: nowrap;
+                    // white-space: nowrap;
                     overflow: hidden;
                     text-overflow: ellipsis;
                     width: 100%;
                     color: $default;
+                    text-align: center;
                 }
             }
 
