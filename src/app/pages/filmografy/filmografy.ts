@@ -1,9 +1,9 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, inject, Input, OnInit } from '@angular/core';
 import { Film, TypeFilm } from '../../../core/models/Film';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatIconModule } from '@angular/material/icon';
 import { ButtonGeneric } from '../../shared/button-generic/button-generic';
-import { BreakpointObserver } from '@angular/cdk/layout';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 
 @Component({
   selector: 'app-filmografy',
@@ -17,26 +17,26 @@ import { BreakpointObserver } from '@angular/cdk/layout';
   styleUrl: './filmografy.scss',
 })
 export class Filmografy implements OnInit {
+  private breakpointObserver = inject(BreakpointObserver);
+  private cdr = inject(ChangeDetectorRef);
+  
   cols = 3;
   @Input() filmData!: Film;
 
-
-  constructor(private breakpointObserver: BreakpointObserver) { }
-
 ngOnInit(): void {
   this.breakpointObserver.observe([
-    '(max-width: 800px)', // Abrange tablets e celulares de forma garantida
-    '(max-width: 480px)'  // Celulares pequenos
+   '(max-width: 644px)', // Celular 
+    '(min-width: 645px) and (max-width: 949px)', // Tablet
+    '(min-width: 950px)' // Desktop
   ]).subscribe(result => {
-    const width = window.innerWidth;
-
-    if (width <= 480) {
-      this.cols = 1;
-    } else if (width <= 1240) {
-      this.cols = 2;
+    if (result.breakpoints['(max-width: 644px)']) {
+      this.cols = 1; // 1 coluna no celular
+    } else if (result.breakpoints['(min-width: 645px) and (max-width: 949px)']) {
+      this.cols = 2; // 2 colunas no tablet
     } else {
-      this.cols = 3;
+      this.cols = 3; // 3 colunas no desktop
     }
+    this.cdr.detectChanges();
   });
   }
 
