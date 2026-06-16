@@ -46,8 +46,8 @@ ngOnInit(): void {
     { type: 'Series' },
     { type: 'Short Film' },
     { type: 'Feature Film' },
-    { type: 'Telenovela' }
-    // { type: 'Videoclipe' },
+    { type: 'Telenovela' },
+    { type: 'Videoclip' }
   ].sort((a, b) => {
     if(a.type === 'All') return -1;
     if(b.type === 'All') return 1;
@@ -56,7 +56,17 @@ ngOnInit(): void {
 
   films: Film[] = [
    {
-      img: '',
+      img: '/cochicho.webp',
+      name: 'Cochicho',
+      year: 2025,
+      type: 'Videoclip',
+      directorFotografy: 'Giovanna Pezzo',
+      director: 'Thais Taverna',
+      function: '2nd Assistant Camera',
+      link: 'https://www.youtube.com/watch?v=ogU8691O7nI'
+    },
+   {
+      img:  '/cine-holliudy.webp',
       name: 'Cine Holliúdy',
       year: 2017,
       type: 'Series',
@@ -83,7 +93,7 @@ ngOnInit(): void {
       function: 'Extra Vídeo Assist'
     },
     {
-      img: '',
+      img: '/mulher-papaya.webp',
       name: 'Mulher Papaya',
       year: 2024,
       type: 'Short Film',
@@ -173,7 +183,7 @@ ngOnInit(): void {
       function: '2nd Assistant Camera'
     },
     {
-      img: '',
+      img: '/as-vitrines.webp',
       name: 'As Vitrines',
       year: 2023,//2025
       type: 'Feature Film',
